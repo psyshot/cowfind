@@ -22,6 +22,8 @@ date = 2022-06-20
 
 ### Linux
 
+#### Alpine
+
 #### Arch
 
 #### Debian
@@ -29,6 +31,8 @@ date = 2022-06-20
 #### Fedora
 
 #### Gentoo
+
+#### Kali
 
 #### Mageia
 
