@@ -16,3 +16,7 @@ draft: false
 
 ## Javascript
 [Hexo](https://hexo.io)
+
+## Ruby
+
+[Jekyll](https://jekyllrb.com))
