@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNIX |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #FED43F;
+        /* Primary theme text color */
+        --primary-text-color: #543631;
+        --primary-text-color-over: #000;
+        /* Primary theme link color */
+        --primary-link-color: #F9BB2D;
+        /* Secondary color: the background body color */
+        --secondary-color: #fcfaf6;
+        --secondary-text-color: #303030;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #d46e13;
+        --toc-background-color: white;
+        --code-color: #4a4a4a;
+        --code-background-color: white;
+
+        --shadow-color: #ddd;
+
+        /* Font used for headers (h1 & h2) */
+        --header-font-family: "Fira Sans", sans-serif;
+        /* Font used for text */
+        --text-font-family: "Fira Sans", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-color: #382929;
+            --primary-text-color: #d7d7d7;
+            --primary-text-color-over: #FFF;
+            --primary-link-color: #9b9b9b;
+            --secondary-color: #282828;
+            --secondary-text-color: #f2f2f2;
+            --toc-highlight-text-color: #f2f2f2;
+            --toc-background-color: #3a3a3a;
+            --code-color: white;
+            --code-background-color: #4a4a4a;
+
+            --shadow-color: #202020;
+            --header-font-family: "Fira Sans", sans-serif;
+            --text-font-family: "Fira Sans", sans-serif;
+        }
+    }
+</style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://psyshot.github.io/cowfind/juice.css">
+    
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https://psyshot.github.io/cowfind/">
+    <div class="logo">
+        <img src="https://psyshot.github.io/cowfind/juice.svg" alt="logo">
+        cowfind
+    </div>
+</a>
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://psyshot.github.io/cowfind/email/">Email</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://psyshot.github.io/cowfind/ssg/">静态网站生成器</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://psyshot.github.io/cowfind/unix/">UNIX</a>
+    
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https://github.com/huhu/juice">Github</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#unix">UNIX</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#ibm-aix"><small>- IBM AIX</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#hui-pu-hp-ux"><small>- 惠普 HP-UX</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#hui-pu-dec-tru64-unix"><small>- 惠普(DEC) Tru64 UNIX</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#oracle-sun-solaris"><small>- Oracle(SUN) Solaris</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#sgi-irix"><small>- SGI IRIX</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#sco-openserver-unixware"><small>- SCO OpenServer&#x2F;Unixware</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#kai-yuan-unixlike">开源Unixlike</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#linux"><small>- Linux</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#bsd"><small>- BSD</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#openbsd"><small>- OpenBSD</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#dragonfly-bsd"><small>- Dragonfly BSD</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#darwin"><small>- Darwin</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#opensolaris"><small>- OpenSolaris</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#gnu-hurd"><small>- GNU Hurd</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#haiku"><small>- Haiku</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#syllable"><small>- Syllable</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#jiao-yu-xue-shu">教育&#x2F;学术</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#minix"><small>- Minix</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#ulix"><small>- Ulix</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#xinu"><small>- Xinu</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#windowsshang-mo-ni">Windows上模拟</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#cygwin"><small>- Cygwin</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#msys2"><small>- MSYS2</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#wsl"><small>- WSL</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#rtos">RTOS</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://psyshot.github.io/cowfind/unix/#apache-nuttx"><small>- Apache NuttX</small></a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text"></div>
+<h2 id="unix">UNIX</h2>
+<h3 id="ibm-aix">IBM AIX</h3>
+<h3 id="hui-pu-hp-ux">惠普 HP-UX</h3>
+<h3 id="hui-pu-dec-tru64-unix">惠普(DEC) Tru64 UNIX</h3>
+<h3 id="oracle-sun-solaris">Oracle(SUN) Solaris</h3>
+<h3 id="sgi-irix">SGI IRIX</h3>
+<h3 id="sco-openserver-unixware">SCO OpenServer/Unixware</h3>
+<h2 id="kai-yuan-unixlike">开源Unixlike</h2>
+<h3 id="linux">Linux</h3>
+<h4 id="alpine">Alpine</h4>
+<h4 id="arch">Arch</h4>
+<h4 id="debian">Debian</h4>
+<h4 id="fedora">Fedora</h4>
+<h4 id="gentoo">Gentoo</h4>
+<h4 id="kali">Kali</h4>
+<h4 id="mageia">Mageia</h4>
+<h4 id="nixos">NixOS</h4>
+<h4 id="slackware">Slackware</h4>
+<h4 id="ubuntu">Ubuntu</h4>
+<h3 id="bsd">BSD</h3>
+<h4 id="freebsd">FreeBSD</h4>
+<h4 id="netbsd">NetBSD</h4>
+<h3 id="openbsd">OpenBSD</h3>
+<h3 id="dragonfly-bsd">Dragonfly BSD</h3>
+<h3 id="darwin">Darwin</h3>
+<h3 id="opensolaris">OpenSolaris</h3>
+<h3 id="gnu-hurd">GNU Hurd</h3>
+<h3 id="haiku">Haiku</h3>
+<h3 id="syllable">Syllable</h3>
+<h2 id="jiao-yu-xue-shu">教育/学术</h2>
+<h3 id="minix">Minix</h3>
+<h3 id="ulix">Ulix</h3>
+<h3 id="xinu">Xinu</h3>
+<h2 id="windowsshang-mo-ni">Windows上模拟</h2>
+<h3 id="cygwin">Cygwin</h3>
+<h3 id="msys2">MSYS2</h3>
+<h3 id="wsl">WSL</h3>
+<h2 id="rtos">RTOS</h2>
+<h3 id="apache-nuttx">Apache NuttX</h3>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://huhu.io">Huhu.io</a> © 2021
+        </small>
+    </footer>
+    
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>

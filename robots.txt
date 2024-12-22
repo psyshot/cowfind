@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://psyshot.github.io/cowfind/sitemap.xml
